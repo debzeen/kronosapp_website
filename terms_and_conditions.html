@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contacto - KronosApp</title>
+    <title>Términos y Condiciones - KronosApp</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
@@ -104,6 +104,11 @@
             align-items: center;
             gap: 12px;
             text-decoration: none;
+            transition: transform 0.3s ease;
+        }
+
+        .logo:hover {
+            transform: scale(1.05);
         }
 
         .logo-img {
@@ -164,11 +169,24 @@
             font-size: 3rem;
             font-weight: 800;
             margin-bottom: 1rem;
-            background: linear-gradient(135deg, #fff 0%, var(--secondary-color) 100%); /* Color verde/secundario para contacto */
+            background: linear-gradient(135deg, #fff 0%, #c7d2fe 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
             line-height: 1.2;
+        }
+
+        .last-updated {
+            font-size: 1rem;
+            color: var(--text-muted-color);
+            font-style: italic;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(129, 140, 248, 0.1);
+            padding: 8px 20px;
+            border-radius: 50px;
+            border: 1px solid rgba(129, 140, 248, 0.2);
         }
 
         /* Content Card */
@@ -179,7 +197,23 @@
             padding: 50px;
             border: 1px solid rgba(255, 255, 255, 0.1);
             box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
-            text-align: center;
+        }
+
+        .intro-text {
+            font-size: 1.1rem;
+            line-height: 1.9;
+            color: var(--text-muted-color);
+            margin-bottom: 40px;
+            padding: 25px;
+            background: rgba(79, 70, 229, 0.05);
+            border-left: 4px solid var(--primary-color);
+            border-radius: 8px;
+        }
+
+        .divider {
+            height: 1px;
+            background: linear-gradient(90deg, transparent, rgba(129, 140, 248, 0.3), transparent);
+            margin: 50px 0;
         }
 
         h2 {
@@ -191,6 +225,33 @@
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        h2::before {
+            content: '';
+            width: 6px;
+            height: 40px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-radius: 3px;
+        }
+
+        h3 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--accent-color);
+            margin: 35px 0 20px 0;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        h3::before {
+            content: '▸';
+            color: var(--secondary-color);
+            font-size: 1.3rem;
         }
 
         p {
@@ -200,45 +261,85 @@
             line-height: 1.9;
         }
 
-        .contact-info {
-            margin-top: 40px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 20px;
-        }
-
-        .contact-item {
-            display: flex;
-            align-items: center;
-            gap: 15px;
-            padding: 20px;
-            background: var(--surface-color);
-            border-radius: 12px;
-            width: 100%;
-            max-width: 400px;
-            border: 1px solid var(--border-color);
-            transition: border-color 0.3s ease;
-        }
-
-        .contact-item:hover {
-            border-color: var(--secondary-color);
-        }
-
-        .contact-item i {
-            font-size: 1.5rem;
-            color: var(--secondary-color);
-        }
-
-        .contact-item a {
+        strong {
             color: var(--text-color);
-            font-weight: 600;
-            text-decoration: none;
-            transition: color 0.3s ease;
+            font-weight: 700;
         }
 
-        .contact-item a:hover {
-            color: var(--secondary-color);
+        ul {
+            margin: 20px 0;
+            padding-left: 0;
+            list-style: none;
+        }
+
+        ul li {
+            margin-bottom: 15px;
+            padding-left: 35px;
+            position: relative;
+            color: var(--text-muted-color);
+            line-height: 1.8;
+            transition: transform 0.3s ease;
+        }
+
+        ul li:hover {
+            transform: translateX(5px);
+        }
+
+        ul li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 24px;
+            height: 24px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-radius: 6px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.8rem;
+            color: white;
+            font-weight: bold;
+        }
+
+        /* Contact Section */
+        .contact-section {
+            margin-top: 60px;
+            padding: 40px;
+            background: linear-gradient(135deg, rgba(79, 70, 229, 0.1) 0%, rgba(16, 185, 129, 0.1) 100%);
+            border-radius: 20px;
+            border: 1px solid rgba(79, 70, 229, 0.2);
+            text-align: center;
+        }
+
+        .contact-section h2 {
+            justify-content: center;
+            margin-top: 0;
+        }
+
+        .contact-section h2::before {
+            display: none;
+        }
+
+        .email-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 15px 30px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            text-decoration: none;
+            border-radius: 12px;
+            font-weight: 700;
+            font-size: 1.1rem;
+            margin-top: 20px;
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 25px rgba(79, 70, 229, 0.4);
+        }
+
+        .email-link:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 35px rgba(79, 70, 229, 0.6);
         }
 
         /* Responsive */
@@ -253,6 +354,10 @@
 
             h2 {
                 font-size: 1.6rem;
+            }
+
+            h3 {
+                font-size: 1.3rem;
             }
         }
     </style>
@@ -276,33 +381,109 @@
     <div class="content">
         <div class="container">
             <div class="header-section">
-                <h1>Contáctanos</h1>
+                <h1>Términos y Condiciones</h1>
                 <p class="last-updated">
-                    <i class="far fa-envelope"></i>
-                    Estamos aquí para ayudarte.
+                    <i class="far fa-calendar-check"></i>
+                    Última actualización: 29 de octubre de 2025
                 </p>
             </div>
 
             <div class="content-card">
-                <h2>¿Cómo podemos ayudarte?</h2>
-                <p>Si tienes preguntas, sugerencias, necesitas soporte técnico o deseas reportar un problema, no dudes en contactarnos a través de los siguientes medios. Te responderemos lo antes posible.</p>
-
-                <div class="contact-info">
-                    <div class="contact-item">
-                        <i class="fas fa-envelope"></i>
-                        <a href="mailto:motivationlatam@gmail.com">motivationlatam@gmail.com</a>
-                    </div>
-                    <p style="font-size: 0.9em; margin-top: 10px; color: var(--accent-color);">
-                        Utiliza este correo para todas las consultas.
-                    </p>
+                <div class="intro-text">
+                    <p>Por favor, lea estos términos y condiciones cuidadosamente antes de usar Nuestro Servicio.</p>
                 </div>
-                
-                <hr style="border: 0; border-top: 1px solid var(--border-color); margin: 40px auto; width: 80%;">
-                
-                <h2>Soporte y Horarios</h2>
-                <p>Nuestro equipo de soporte está disponible de Lunes a Viernes (8:00 AM - 5:00 PM, hora de El Salvador).</p>
-                <p>¡Gracias por usar Kronos App!</p>
 
+                <h2>Interpretación y Definiciones</h2>
+
+                <h3>Interpretación</h3>
+                <p>Las palabras cuyas letras iniciales están en mayúscula tienen significados definidos bajo las siguientes condiciones. Las siguientes definiciones tendrán el mismo significado, independientemente de si aparecen en singular o en plural.</p>
+
+                <h3>Definiciones</h3>
+                <p>Para los propósitos de estos Términos y Condiciones:</p>
+                <ul>
+                    <li><strong>Aplicación:</strong> Se refiere al programa de software proporcionado por la Compañía y descargado por Usted en cualquier dispositivo electrónico, llamado Kronos App.</li>
+                    <li><strong>Tienda de Aplicaciones:</strong> Se refiere al servicio de distribución digital operado por Apple Inc. (Apple App Store) o Google Inc. (Google Play Store) en el que se ha descargado la Aplicación.</li>
+                    <li><strong>Afiliada:</strong> Se refiere a una entidad que controla, es controlada por, o está bajo control común con una parte.</li>
+                    <li><strong>País:</strong> Se refiere a: <strong>El Salvador</strong>.</li>
+                    <li><strong>Compañía:</strong> (Referida como "la Compañía", "Nosotros" o "Nuestra" en este Acuerdo) se refiere a <strong>Kronos App</strong>.</li>
+                    <li><strong>Dispositivo:</strong> Se refiere a cualquier dispositivo que pueda acceder al Servicio, como una computadora, un teléfono móvil o una tableta digital.</li>
+                    <li><strong>Servicio:</strong> Se refiere a la <strong>Aplicación</strong>.</li>
+                    <li><strong>Términos y Condiciones:</strong> (también referidos como "Términos") significan estos Términos y Condiciones que forman el acuerdo completo entre Usted y la Compañía con respecto al uso del Servicio.</li>
+                    <li><strong>Servicio de Redes Sociales de Terceros:</strong> Se refiere a cualquier servicio o contenido (incluidos datos, información, productos o servicios) proporcionado por un tercero que pueda ser mostrado, incluido o puesto a disposición por el Servicio.</li>
+                    <li><strong>Usted:</strong> Significa el individuo que accede o utiliza el Servicio, o la empresa u otra entidad legal en nombre de la cual dicho individuo está accediendo o utilizando el Servicio, según corresponda.</li>
+                </ul>
+
+                <div class="divider"></div>
+
+                <h2>Reconocimiento</h2>
+                <p>Estos son los Términos y Condiciones que rigen el uso de este Servicio y el acuerdo que opera entre Usted y la Compañía. Estos Términos establecen los derechos y obligaciones de todos los usuarios con respecto al uso del Servicio.</p>
+                <p>Su acceso y uso del Servicio está condicionado a Su aceptación y cumplimiento de estos Términos. Estos se aplican a todos los visitantes, usuarios y otros que acceden o utilizan el Servicio.</p>
+                <p>Al acceder o utilizar el Servicio, Usted acepta estar sujeto a estos Términos. Si no está de acuerdo con alguna parte de estos Términos, no podrá acceder al Servicio.</p>
+                <p>Usted declara que tiene más de 18 años. La Compañía requiere que los usuarios menores de 18 años tengan el consentimiento de un padre o tutor.</p>
+                <p>Su acceso y uso del Servicio también está condicionado a Su aceptación y cumplimiento de la Política de Privacidad de la Compañía. Lea atentamente Nuestra Política de Privacidad antes de utilizar Nuestro Servicio.</p>
+
+                <div class="divider"></div>
+
+                <h2>Enlaces a Otros Sitios Web</h2>
+                <p>Nuestro Servicio puede contener enlaces a sitios web o servicios de terceros que no son propiedad ni están controlados por la Compañía.</p>
+                <p>La Compañía no tiene control sobre, y no asume ninguna responsabilidad por, el contenido, las políticas de privacidad o las prácticas de cualquier sitio web o servicio de terceros. Le recomendamos encarecidamente que lea los términos y condiciones y las políticas de privacidad de cualquier sitio web o servicio de terceros que visite.</p>
+
+                <div class="divider"></div>
+
+                <h2>Terminación</h2>
+                <p>Podemos terminar o suspender Su acceso inmediatamente, sin previo aviso ni responsabilidad, por cualquier motivo, incluido, entre otros, si Usted incumple estos Términos y Condiciones.</p>
+                <p>Tras la terminación, Su derecho a utilizar el Servicio cesará inmediatamente.</p>
+
+                <div class="divider"></div>
+
+                <h2>Limitación de Responsabilidad</h2>
+                <p>No obstante los daños en que Usted pueda incurrir, la responsabilidad total de la Compañía y cualquiera de sus proveedores bajo cualquier disposición de estos Términos y Su recurso exclusivo por todo lo anterior se limitará a la cantidad realmente pagada por Usted a través del Servicio o a 100 USD si no ha comprado nada a través del Servicio.</p>
+                <p>En la medida máxima permitida por la ley aplicable, en ningún caso la Compañía o sus proveedores serán responsables por daños especiales, incidentales, indirectos o consecuentes de ningún tipo.</p>
+
+                <div class="divider"></div>
+
+                <h2>Descargo de Responsabilidad "TAL CUAL" y "SEGÚN DISPONIBILIDAD"</h2>
+                <p>El Servicio se le proporciona a Usted "TAL CUAL" y "SEGÚN DISPONIBILIDAD" y con todas las fallas y defectos sin garantía de ningún tipo. La Compañía no ofrece ninguna garantía o compromiso, y no hace ninguna representación de ningún tipo, de que el Servicio cumplirá con Sus requisitos, logrará los resultados previstos, operará sin interrupción o estará libre de errores.</p>
+                <p>Algunas jurisdicciones no permiten la exclusión de ciertos tipos de garantías o limitaciones en los derechos legales aplicables de un consumidor, por lo que es posible que algunas o todas las exclusiones y limitaciones anteriores no se apliquen a Usted.</p>
+
+                <div class="divider"></div>
+
+                <h2>Ley Aplicable</h2>
+                <p>Las leyes del País, excluyendo sus reglas de conflicto de leyes, regirán estos Términos y Su uso del Servicio.</p>
+
+                <h2>Resolución de Disputas</h2>
+                <p>Si tiene alguna inquietud o disputa sobre el Servicio, Usted acepta intentar resolver la disputa informalmente contactando primero a la Compañía.</p>
+
+                <div class="divider"></div>
+
+                <h2>Usuarios de la Unión Europea (UE) y Cumplimiento Legal en EE. UU.</h2>
+                <p>Si Usted es un consumidor de la Unión Europea, se beneficiará de las disposiciones obligatorias de la ley del país en el que reside.</p>
+                <p>Usted declara y garantiza que (i) no se encuentra en un país sujeto a embargo del gobierno de los Estados Unidos o designado como país "terrorista", y (ii) no está incluido en ninguna lista de partes prohibidas o restringidas del gobierno de los Estados Unidos.</p>
+
+                <div class="divider"></div>
+
+                <h2>Modificaciones e Interpretación</h2>
+                <h3>Divisibilidad</h3>
+                <p>Si alguna disposición de estos Términos se considera inaplicable o inválida, dicha disposición se modificará e interpretará para lograr los objetivos de dicha disposición en la mayor medida posible según la ley aplicable.</p>
+
+                <h3>Renuncia</h3>
+                <p>La falta de ejercicio de un derecho o de exigencia de cumplimiento de una obligación en virtud de estos Términos no afectará la capacidad de una parte para ejercer dicho derecho o exigir dicho cumplimiento en cualquier momento posterior.</p>
+
+                <h3>Interpretación de la Traducción</h3>
+                <p>Estos Términos y Condiciones pueden haber sido traducidos. Usted acepta que el texto original en inglés prevalecerá en caso de disputa.</p>
+
+                <h2>Cambios a Estos Términos y Condiciones</h2>
+                <p>Nos reservamos el derecho, a Nuestra sola discreción, de modificar o reemplazar estos Términos en cualquier momento. Si una revisión es sustancial, haremos esfuerzos razonables para proporcionar un aviso de al menos 30 días antes de que los nuevos términos entren en vigor.</p>
+                <p>Al continuar accediendo o utilizando Nuestro Servicio después de que esas revisiones se hagan efectivas, Usted acepta estar sujeto a los términos revisados.</p>
+
+                <div class="contact-section">
+                    <h2>Contáctenos</h2>
+                    <p>Si tiene alguna pregunta sobre estos Términos y Condiciones, puede contactarnos:</p>
+                    <a href="mailto:motivationlatam@gmail.com" class="email-link">
+                        <i class="fas fa-envelope"></i>
+                        motivationlatam@gmail.com
+                    </a>
+                </div>
             </div>
         </div>
     </div>
