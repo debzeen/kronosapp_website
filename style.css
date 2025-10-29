@@ -557,7 +557,7 @@ body {
 .kai-feature-card {
     background: rgba(30, 41, 59, 0.5);
     backdrop-filter: blur(10px);
-    padding: 2.5rem;
+    padding: 4.5rem;
     border-radius: 20px;
     border: 1px solid rgba(255, 255, 255, 0.1);
     transition: all 0.4s ease;
