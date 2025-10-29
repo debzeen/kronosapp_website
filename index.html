@@ -7,22 +7,23 @@
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script> <!-- Example for icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
+    <div class="bg-animation"></div>
 
-    <header class="navbar">
+    <header class="navbar" id="navbar">
         <div class="container">
             <div class="logo">
-                <img src="../../assets/full_icon.png" alt="KronosApp Logo" class="logo-img">
+                <img src="https://via.placeholder.com/45.png/667eea/ffffff?text=K" alt="KronosApp Logo" class="logo-img">
                 <h1>KronosApp</h1>
             </div>
             <nav>
                 <ul>
                     <li><a href="#features">Características</a></li>
                     <li><a href="#tech-stack">Tecnología</a></li>
-                    <li><a href="#kai">KAI Assistant</a></li>
+                    <li><a href="#kai-insights">KAI Assistant</a></li>
                 </ul>
             </nav>
             <a href="#" class="btn btn-primary">Descargar App</a>
@@ -36,8 +37,7 @@
                 <p class="subtitle">KronosApp es tu asistente personal inteligente para gestionar tareas, hábitos y eventos, todo en un solo lugar.</p>
                 <a href="#" class="btn btn-large btn-secondary">Comienza Gratis</a>
                 <div class="hero-image-container">
-                    <!-- Placeholder for an image of the app -->
-                    <img src="https://via.placeholder.com/800x450.png/E0E7FF/818CF8?text=Vista+Previa+de+la+App" alt="Vista previa de la aplicación KronosApp" class="hero-image">
+                    <img src="https://via.placeholder.com/800x450.png/1e293b/818CF8?text=Vista+Previa+de+la+App" alt="Vista previa de la aplicación KronosApp" class="hero-image">
                 </div>
             </div>
         </section>
@@ -76,11 +76,11 @@
             </div>
         </section>
 
-        <section id="calendar-showcase" class="calendar-showcase-section">
+        <section id="calendar-showcase" class="calendar-showcase-section showcase-section">
             <div class="container">
                 <div class="showcase-content-reversed">
                     <div class="showcase-image-container">
-                        <img src="https://via.placeholder.com/400x700.png/EDE9FE/8B5CF6?text=Vista+Agenda+del+Calendario" alt="Vista Agenda del Calendario en KronosApp" class="showcase-image">
+                        <img src="https://via.placeholder.com/400x700.png/1e293b/8B5CF6?text=Vista+Agenda" alt="Vista Agenda del Calendario" class="showcase-image">
                     </div>
                     <div class="showcase-text">
                         <h3 class="section-title">Un Calendario que lo Entiende Todo</h3>
@@ -97,7 +97,7 @@
             </div>
         </section>
 
-        <section id="habits-showcase" class="habits-showcase-section">
+        <section id="habits-showcase" class="habits-showcase-section showcase-section">
             <div class="container">
                 <div class="showcase-content">
                     <div class="showcase-text">
@@ -112,7 +112,7 @@
                         <a href="#" class="btn btn-outline">Explorar más sobre hábitos</a>
                     </div>
                     <div class="showcase-image-container">
-                        <img src="https://via.placeholder.com/400x700.png/D1FAE5/10B981?text=Seguimiento+de+Hábitos" alt="Seguimiento de Hábitos en KronosApp" class="showcase-image">
+                        <img src="https://via.placeholder.com/400x700.png/1e293b/10B981?text=Seguimiento+Hábitos" alt="Seguimiento de Hábitos" class="showcase-image">
                     </div>
                 </div>
             </div>
@@ -123,9 +123,9 @@
                 <h3 class="section-title">Una Interfaz Diseñada para Ti</h3>
                 <p class="section-subtitle">Limpia, intuitiva y potente. Así es la experiencia KronosApp.</p>
                 <div class="gallery-grid">
-                    <img src="https://via.placeholder.com/400x700.png/E0E7FF/818CF8?text=Lista+de+Tareas" alt="Lista de Tareas" class="gallery-image">
-                    <img src="https://via.placeholder.com/400x700.png/C7D2FE/6366F1?text=Detalles+de+Tarea" alt="Detalles de Tarea" class="gallery-image featured-image">
-                    <img src="https://via.placeholder.com/400x700.png/E0E7FF/818CF8?text=Crear+Tarea" alt="Crear Tarea" class="gallery-image">
+                    <img src="https://via.placeholder.com/400x700.png/1e293b/818CF8?text=Lista+de+Tareas" alt="Lista de Tareas" class="gallery-image">
+                    <img src="https://via.placeholder.com/400x700.png/1e293b/6366F1?text=Detalles" alt="Detalles de Tarea" class="gallery-image featured-image">
+                    <img src="https://via.placeholder.com/400x700.png/1e293b/818CF8?text=Crear+Tarea" alt="Crear Tarea" class="gallery-image">
                 </div>
             </div>
         </section>
@@ -133,23 +133,23 @@
         <section id="kai-insights" class="kai-insights-section">
             <div class="container">
                 <div class="kai-header">
-                    <img src="https://via.placeholder.com/150x150.png/C4B5FD/6D28D9?text=KAI" alt="Asistente KAI" class="kai-avatar">
+                    <img src="https://via.placeholder.com/140x140.png/667eea/ffffff?text=KAI" alt="Asistente KAI" class="kai-avatar">
                     <h3 class="section-title">KAI Insights: Tu Coach Personal de IA</h3>
                     <p class="section-subtitle">KAI va más allá de un simple asistente. Es un motor de inteligencia que analiza tu actividad para ofrecerte una visión clara de tu progreso y recomendaciones personalizadas para alcanzar tu máximo potencial.</p>
                 </div>
                 <div class="kai-features-grid">
                     <div class="kai-feature-card">
-                        <div class="kai-feature-icon" style="--icon-bg: #E0E7FF; --icon-color: #4F46E5;"><i class="fas fa-chart-pie"></i></div>
+                        <div class="kai-feature-icon icon-blue"><i class="fas fa-chart-pie"></i></div>
                         <h4>Análisis Integral</h4>
-                        <p>KAI evalúa tu productividad, hábitos, bienestar y gestión del tiempo para darte una **Puntuación General**. Identifica tendencias, fortalezas y áreas de oportunidad con gráficos detallados.</p>
+                        <p>KAI evalúa tu productividad, hábitos, bienestar y gestión del tiempo para darte una Puntuación General. Identifica tendencias, fortalezas y áreas de oportunidad con gráficos detallados.</p>
                     </div>
                     <div class="kai-feature-card">
-                        <div class="kai-feature-icon" style="--icon-bg: #D1FAE5; --icon-color: #10B981;"><i class="fas fa-lightbulb"></i></div>
+                        <div class="kai-feature-icon icon-green"><i class="fas fa-lightbulb"></i></div>
                         <h4>Sugerencias Inteligentes</h4>
                         <p>Recibe recomendaciones proactivas y dinámicas generadas por IA. Desde optimizar un hábito hasta implementar una nueva técnica de productividad, cada sugerencia es accionable y está adaptada a ti.</p>
                     </div>
                     <div class="kai-feature-card">
-                        <div class="kai-feature-icon" style="--icon-bg: #FEF3C7; --icon-color: #F59E0B;"><i class="fas fa-comments"></i></div>
+                        <div class="kai-feature-icon icon-yellow"><i class="fas fa-comments"></i></div>
                         <h4>Chat Avanzado</h4>
                         <p>Conversa con KAI para obtener respuestas complejas, generar resúmenes de tu semana o pedirle que cree tareas y eventos por ti. Tu productividad, ahora conversacional.</p>
                     </div>
@@ -185,5 +185,6 @@
         </div>
     </footer>
 
+    <script src="script.js"></script>
 </body>
 </html>
