@@ -163,6 +163,14 @@ body {
     font-weight: 700;
 }
 
+/* --- General Section Styling --- */
+.section-subtitle {
+    text-align: center;
+    font-size: 1.1rem;
+    color: var(--text-muted-color);
+    max-width: 650px;
+    margin: -2rem auto 3rem auto;
+}
 /* --- Features Section --- */
 .features-section {
     padding: 80px 0;
@@ -187,22 +195,177 @@ body {
     margin-bottom: 0.5rem;
 }
 
-/* --- KAI Section --- */
-.kai-section {
+.feature-icon {
+    font-size: 2rem;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+    display: inline-block;
     background-color: #eef2ff; /* Indigo 50 */
-    padding: 80px 0;
+    width: 60px;
+    height: 60px;
+    line-height: 60px;
+    border-radius: 50%;
+    text-align: center;
 }
 
-.kai-content {
+/* --- Calendar Showcase Section --- */
+.calendar-showcase-section {
+    padding: 80px 0;
+    background-color: var(--surface-color);
+}
+
+.showcase-content-reversed {
     display: flex;
     align-items: center;
     gap: 4rem;
 }
 
-.kai-text { flex: 1; }
-.kai-text .section-title { text-align: left; }
-.kai-image-container { flex-shrink: 0; }
-.kai-image { border-radius: 50%; width: 300px; height: 300px; object-fit: cover; }
+.showcase-content-reversed .showcase-text {
+    order: 1; /* Text on the right */
+    flex: 1;
+}
+
+.showcase-content-reversed .showcase-image-container {
+    order: 2; /* Image on the left */
+    flex: 0 0 40%;
+    text-align: center;
+}
+
+
+/* --- Habits Showcase Section --- */
+.habits-showcase-section {
+    padding: 80px 0;
+    background-color: #f0fdf4; /* Emerald 50 */
+}
+
+.showcase-content {
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+}
+
+.showcase-text {
+    flex: 1;
+}
+
+.showcase-text .section-title {
+    text-align: left;
+    margin-bottom: 1.5rem;
+}
+
+.showcase-text p {
+    font-size: 1.1rem;
+    color: var(--text-muted-color);
+    margin-bottom: 2rem;
+}
+
+.showcase-text ul {
+    list-style: none;
+    margin-bottom: 2rem;
+    padding-left: 0;
+}
+
+.showcase-text ul li {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 1rem;
+    font-size: 1rem;
+}
+
+.showcase-text ul li i {
+    color: var(--secondary-color);
+    margin-right: 12px;
+    margin-top: 4px;
+}
+
+.showcase-image-container { flex: 0 0 40%; text-align: center; }
+.showcase-image { max-width: 80%; border-radius: 24px; box-shadow: var(--shadow-md); border: 4px solid var(--surface-color); }
+
+/* --- Gallery Section --- */
+.gallery-section {
+    padding: 80px 0;
+    background-color: var(--surface-color);
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    align-items: center;
+    margin-top: 2rem;
+}
+
+.gallery-image {
+    width: 100%;
+    border-radius: 24px; /* More rounded for a mobile feel */
+    box-shadow: var(--shadow-md);
+    border: 4px solid var(--border-color);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gallery-image:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+}
+
+.featured-image {
+    transform: scale(1.1); /* Make the central image stand out */
+}
+
+/* --- KAI Insights Section --- */
+.kai-insights-section {
+    background-color: #eef2ff; /* Indigo 50 */
+    padding: 80px 0;
+    text-align: center;
+}
+
+.kai-header {
+    margin-bottom: 3rem;
+}
+
+.kai-avatar {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    margin: 0 auto 1.5rem auto;
+    border: 4px solid var(--surface-color);
+    box-shadow: var(--shadow-md);
+}
+
+.kai-insights-section .section-title {
+    margin-bottom: 1rem;
+}
+
+.kai-insights-section .section-subtitle {
+    margin-bottom: 0;
+}
+
+.kai-features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    text-align: left;
+}
+
+.kai-feature-card {
+    background-color: var(--surface-color);
+    padding: 2rem;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow-md);
+}
+
+.kai-feature-icon {
+    background-color: var(--icon-bg, #e0e7ff);
+    color: var(--icon-color, #4f46e5);
+    width: 50px;
+    height: 50px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
 
 /* --- Tech Stack Section --- */
 .tech-stack-section {
