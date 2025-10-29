@@ -542,7 +542,7 @@ body {
     
     /* Estilos de Fondo y Fuente para el ÍCONO */
     background: linear-gradient(135deg, var(--primary-color) 0%, var(--accent-color) 100%); /* Fondo degradado */
-    font-size: 4rem; /* Tamaño grande para el ícono de robot */
+    font-size: 6rem; /* Tamaño grande para el ícono de robot */
     color: white; /* Color del ícono */
 }
 
